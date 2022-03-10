@@ -1,0 +1,32 @@
+@mixin buton-style($background, $color){
+  background: $background;
+  color: $color;
+
+  &:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+.btn{
+  width: 200px;
+  padding: 10px 0;
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+  margin: 10px 0;
+
+  &.btn-laranja{
+    @include buton-style($color-orange, #fff);
+    }
+  &.btn-azul{
+      @include buton-style($color-azul, #fff);
+    }
+  &.btn-roxo{
+      @include buton-style($color-purple, #fff);
+    }
+}
+
+
+
